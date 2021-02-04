@@ -9,6 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 
 // Angular material dependecies
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
   imports: [
@@ -16,6 +17,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

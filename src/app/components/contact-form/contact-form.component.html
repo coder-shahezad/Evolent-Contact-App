@@ -1,0 +1,133 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <h2 mat-dialog-title class="text-center">Create Contact</h2>
+  <mat-dialog-content class="mat-typography">
+    <div class="row mb-2">
+      <div class="col">
+        <mat-form-field class="w-100" appearance="outline">
+          <mat-label>First Name</mat-label>
+          <input
+            matInput
+            placeholder="Enter first name"
+            formControlName="firstName"
+          />
+          <mat-error
+            *ngIf="
+              f.firstName.invalid &&
+              (f.firstName.dirty || f.firstName.touched || isSubmitted)
+            "
+          >
+            <span *ngIf="f.firstName.errors">
+              <span *ngIf="f.firstName.errors.required">
+                First Name is <strong>required</strong>
+              </span>
+              <span *ngIf="f.firstName.errors.pattern"
+                >Please enter only <strong>alphabets</strong>
+              </span>
+            </span>
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col">
+        <mat-form-field class="w-100" appearance="outline">
+          <mat-label>Last Name</mat-label>
+          <input
+            matInput
+            placeholder="Enter last name"
+            formControlName="lastName"
+          />
+          <mat-error
+            *ngIf="
+              f.lastName.invalid &&
+              (f.lastName.dirty || f.lastName.touched || isSubmitted)
+            "
+          >
+            <span *ngIf="f.lastName.errors">
+              <span *ngIf="f.lastName.errors.required">
+                Last Name is <strong>required</strong>
+              </span>
+              <span *ngIf="f.lastName.errors.pattern">
+                Please enter only <strong>alphabets</strong>
+              </span>
+            </span>
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col">
+        <mat-form-field class="w-100" appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Enter email" formControlName="email" />
+          <mat-error
+            *ngIf="
+              f.email.invalid &&
+              (f.email.dirty || f.email.touched || isSubmitted)
+            "
+          >
+            <span *ngIf="f.email.errors">
+              <span *ngIf="f.email.errors.required">
+                Last Name is <strong>required</strong>
+              </span>
+              <span *ngIf="f.email.errors.email || f.email.errors.pattern">
+                Email must be a valid email address
+              </span>
+            </span>
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col">
+        <mat-form-field class="w-100" appearance="outline">
+          <mat-label>Phone Number</mat-label>
+          <input
+            matInput
+            type="tel"
+            mask="( 0000 ) - 000 - 000"
+            minlength="10"
+            formControlName="phoneNumber"
+            placeholder="Enter phone number"
+          />
+          <mat-error
+            *ngIf="
+              f.phoneNumber.invalid &&
+              (f.phoneNumber.dirty || f.phoneNumber.touched || isSubmitted)
+            "
+          >
+            <span *ngIf="f.phoneNumber.errors">
+              <span *ngIf="f.phoneNumber.errors.required">
+                Last Name is <strong>required</strong>
+              </span>
+              <span *ngIf="f.phoneNumber.errors.minlength">
+                Phone Number should have <strong>10 digits</strong>
+              </span>
+            </span>
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <mat-radio-group formControlName="status">
+          <mat-radio-button class="mr-4" [value]="true">
+            Active
+          </mat-radio-button>
+          <mat-radio-button [value]="false">Inactive</mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-raised-button mat-dialog-close>Cancel</button>
+    <button
+      [disabled]="contactForm.invalid"
+      mat-button
+      mat-raised-button
+      color="primary"
+    >
+      Save
+    </button>
+  </mat-dialog-actions>
+</form>
