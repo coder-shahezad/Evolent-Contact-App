@@ -1,0 +1,49 @@
+.contact-card {
+  max-width: 400px;
+}
+.contact-card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.contact-card-avatar {
+  position: absolute;
+  width: 40%;
+  left: 15px;
+  top: 30px;
+}
+.chip {
+  display: inline-flex;
+  flex-direction: row;
+  color: #ffffff;
+  border: none;
+  cursor: default;
+  height: 32px;
+  outline: none;
+  padding: 0;
+  white-space: nowrap;
+  align-items: center;
+  border-radius: 16px;
+  vertical-align: middle;
+  text-decoration: none;
+  justify-content: center;
+  .chip-content {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    white-space: nowrap;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+.active-chip {
+  background-color: rgb(76, 175, 80);
+}
+.inActive-chip {
+  background-color: rgb(244, 67, 54);
+}
+@media only screen and (max-width: 600px) {
+  .contact-card-avatar {
+    width: 32%;
+    // left: 15px;
+    top: 35px;
+  }
+}

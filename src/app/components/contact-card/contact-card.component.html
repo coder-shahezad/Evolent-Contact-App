@@ -1,0 +1,52 @@
+<mat-card class="contact-card">
+  <!-- <mat-card-header>
+
+  </mat-card-header> -->
+  <img
+    mat-card-image
+    src="../../../assets/img/header-banner.svg"
+    alt="Contact card background image"
+    height="130px"
+  />
+  <img
+    class="contact-card-avatar"
+    src="../../../assets/img/avatar.png"
+    alt="Contact card user image"
+  />
+  <mat-card-content class="text-center">
+    <h5>{{ contact.firstName }}{{ " " }}{{ contact.lastName }}</h5>
+    <p>{{ contact.email }}</p>
+    <p>{{ contact.phoneNumber }}</p>
+    <div
+      class="chip"
+      [ngClass]="contact.status ? 'active-chip' : 'inActive-chip'"
+    >
+      <div class="chip-content">
+        {{ contact.status ? "Active" : "Inactive" }}
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions class="text-center">
+    <button
+      mat-stroked-button
+      color="primary"
+      matTooltip="Edit Contact"
+      matTooltipPosition="above"
+      (click)="edit(contact)"
+    >
+      <mat-icon>edit</mat-icon>
+      Edit
+    </button>
+    <button
+      mat-stroked-button
+      color="warn"
+      matTooltip="Delete Contact"
+      matTooltipPosition="above"
+      matTooltipClass="delete-contact-tooltip"
+      (click)="delete(contact)"
+    >
+      <mat-icon>delete_forever</mat-icon>
+      Delete
+    </button>
+  </mat-card-actions>
+</mat-card>
