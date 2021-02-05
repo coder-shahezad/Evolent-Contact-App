@@ -1,5 +1,7 @@
 <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-  <h2 mat-dialog-title class="text-center">Create Contact</h2>
+  <h2 mat-dialog-title class="text-center">
+    {{ isContactEdit ? "Update" : "Create" }} Contact
+  </h2>
   <mat-dialog-content class="mat-typography">
     <div class="row mb-2">
       <div class="col">

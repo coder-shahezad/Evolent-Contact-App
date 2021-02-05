@@ -4,11 +4,12 @@
  -reflects changes on every CRUD in realtime
  -simulates cloud DB operation
  -I've acheived this using RxJS's Subject
-*/
+ */
 
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Contact } from '../models/contact';
 
 @Injectable({
   providedIn: 'root',
@@ -40,6 +41,15 @@ export class StorageService {
       Math.random().toString(36).substring(2, 15) +
       Math.random().toString(36).substring(2, 15)
     );
+  }
+
+  /**
+   *Finds a particular contact Index in DB by its ID
+   * @param {string} id
+   * @param {Contact[]} contact
+   */
+  findContactIndexById(id: string, contact: Contact[]) {
+    return contact.findIndex((item) => item['id'] === id);
   }
 
   /**

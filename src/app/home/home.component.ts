@@ -1,10 +1,9 @@
-import { StorageService } from './../services/storage.service';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { StorageService } from './../services/storage.service';
 import { SharedService } from './../services/shared.service';
 import { ContactFormComponent } from './../components/contact-form/contact-form.component';
 import { Contact } from './../models/contact';
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -36,6 +35,19 @@ export class HomeComponent implements OnInit {
   openAddContactForm(): void {
     const dialogRef = this.dialog.open(ContactFormComponent, {
       width: '500px',
+      data: {
+        isContactEdit: false,
+      },
+    });
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+
+  onEditContact(contact: Contact): void {
+    const dialogRef = this.dialog.open(ContactFormComponent, {
+      width: '500px',
+      data: { ...contact, isContactEdit: true },
     });
     dialogRef.afterClosed().subscribe((result) => {
       console.log(`Dialog result: ${result}`);

@@ -4,7 +4,10 @@
       class="col-11 col-sm-11 col-md-5 col-lg-4 col-xl-3 mb-2 align-item-center"
       *ngFor="let contact of contactList"
     >
-      <app-contact-card [contact]="contact"></app-contact-card>
+      <app-contact-card
+        [contact]="contact"
+        (editContact)="onEditContact($event)"
+      ></app-contact-card>
     </div>
   </div>
 </div>
