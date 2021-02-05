@@ -10,6 +10,9 @@ import { SearchContactComponent } from './../components/search-contact/search-co
 import { ContactCardComponent } from './../components/contact-card/contact-card.component';
 import { ContactFormComponent } from './../components/contact-form/contact-form.component';
 
+// Custom Pipes to filter contact listing
+import { SortContactsByNamePipe } from '../pipes/sort-contacts-by-name.pipe';
+
 // Angular material dependecies
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -27,6 +30,7 @@ import { MatRadioModule } from '@angular/material/radio';
     SearchContactComponent,
     ContactCardComponent,
     ContactFormComponent,
+    SortContactsByNamePipe,
   ],
   imports: [
     CommonModule,
