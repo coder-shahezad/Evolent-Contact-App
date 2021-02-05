@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { StorageService } from './../services/storage.service';
 import { SharedService } from './../services/shared.service';
+import { ContactDataService } from './../services/contact.data.service';
 import { ContactFormComponent } from './../components/contact-form/contact-form.component';
 import { Contact } from './../models/contact';
 @Component({
@@ -19,7 +20,8 @@ export class HomeComponent implements OnInit {
   constructor(
     public SharedService: SharedService,
     public dialog: MatDialog,
-    private storageService: StorageService
+    private storageService: StorageService,
+    private contactDataService: ContactDataService
   ) {}
 
   ngOnInit(): void {
@@ -52,5 +54,10 @@ export class HomeComponent implements OnInit {
     dialogRef.afterClosed().subscribe((result) => {
       console.log(`Dialog result: ${result}`);
     });
+  }
+
+  onDeleteContact(contact: Contact): void {
+    this.contactDataService.delete(contact.id);
+    this.storageService.showSnackBar('Contact Deleted Successfully', 'OK');
   }
 }

@@ -54,6 +54,18 @@ export class ContactDataService {
   }
 
   /**
+   *Beauty of adding unique id comes in here as well
+   *It helps us search record quickly
+   *Deletes value in linear time complexity
+   * @param {string} i
+   */
+  delete(id: string) {
+    const index = this.storageServ.findContactIndexById(id, this.contactData);
+    this.contactData.splice(index, 1);
+    this.storeInDB(this.contactData);
+  }
+
+  /**
    *Updates data in our Database
    * @private
    * @param {Contact[]} data
