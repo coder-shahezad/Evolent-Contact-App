@@ -6,6 +6,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { NgxMaskModule } from 'ngx-mask';
 
 import { HomeComponent } from './home.component';
+import { SearchContactComponent } from './../components/search-contact/search-contact.component';
 import { ContactCardComponent } from './../components/contact-card/contact-card.component';
 import { ContactFormComponent } from './../components/contact-form/contact-form.component';
 
@@ -21,7 +22,12 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
-  declarations: [HomeComponent, ContactCardComponent, ContactFormComponent],
+  declarations: [
+    HomeComponent,
+    SearchContactComponent,
+    ContactCardComponent,
+    ContactFormComponent,
+  ],
   imports: [
     CommonModule,
     HomeRoutingModule,

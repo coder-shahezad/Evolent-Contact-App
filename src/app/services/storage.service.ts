@@ -53,6 +53,32 @@ export class StorageService {
   }
 
   /**
+  *Filters data on the basis of search term entered in the search contact box
+  *searching on the basis of:
+    -First Name
+    -Last Name
+    -Email
+    -Phone Number
+  * @param {string} searchTerm
+  * @param {Contact[]} dataArr
+  * @return
+  */
+  filter(searchTerm: string, dataArr: Contact[]) {
+    if (!searchTerm) {
+      return dataArr;
+    }
+    searchTerm = searchTerm.toLowerCase().trim();
+    return dataArr.filter((element) => {
+      return (
+        element.firstName.toLowerCase().includes(searchTerm) ||
+        element.lastName.toLowerCase().includes(searchTerm) ||
+        element.email.toLowerCase().includes(searchTerm) ||
+        element.phoneNumber.toString().includes(searchTerm)
+      );
+    });
+  }
+
+  /**
    *Important method.
    *It returns storage subject that we have created above as Observable
    *By doing so, once you subscribe to it you will get updated values

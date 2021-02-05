@@ -32,6 +32,13 @@ export class HomeComponent implements OnInit {
       this.contactList = JSON.parse(localStorage.getItem('contactList'));
       this.contactsToCheck = Array.from(this.contactList);
     });
+
+    this.SharedService.searchedTerm.subscribe((searchTerm: string) => {
+      this.contactList = this.storageService.filter(
+        searchTerm,
+        this.contactsToCheck
+      );
+    });
   }
 
   openAddContactForm(): void {
