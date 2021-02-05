@@ -23,7 +23,7 @@
 
 ## ⚙ Installation
 
-> To proceed with smooth installation you should have Node 8+ version installed in your system
+> To proceed with smooth installation you should have Node Latest ( 14+ ) version installed in your system
 
 > Also, to serve this app in your local please install Angular CLI as this project was generated with [Angular CLI](https://github.com/angular/angular-cli)
 
