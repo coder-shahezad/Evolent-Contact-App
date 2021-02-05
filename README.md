@@ -1,27 +1,97 @@
-# EvolentContactApp
+# Evolent App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
+#### Alternatively, Please have a look on
 
-## Development server
+## [Live Demo](https://evolent-contact-app.web.app/) 🔥
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+> Designed and implemented a production ready application for maintaining contact information
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+> Technology used: `Angular 11` , `Angular Material` , `RxJS`, and `Bootstrap 4`
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## 📚 Table of Contents
 
-## Running unit tests
+- [Installation](#installation)
+- [Features](#features)
+- [Screencasts](#screencasts)
+- [BrowserList](#browserlist)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
+## ⚙ Installation
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+> To proceed with smooth installation you should have Node 8+ version installed in your system
 
-## Further help
+> Also, to serve this app in your local please install Angular CLI as this project was generated with [Angular CLI](https://github.com/angular/angular-cli)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+> Please navigate to `Evolent-Contact-App` folder and run below command to install `node_modules` in order to run this app locally.
+
+```shell
+$ npm install
+```
+
+> Once node dependencies are installed then please open `command prompt` and run `npm run start` for a development server.
+> Navigate to `http://localhost:4200/`.
+> The app will automatically reload if you change any of the source files.
+
+---
+
+## Features
+
+> Expected functionality:
+
+👉 Add a contact <br />
+👉 List of contacts <br />
+👉 Edit contact <br />
+👉 Delete contact
+
+> Out of excitement, I have added:
+
+- Search a contact
+
+---
+
+## 📷 Example GIFs
+
+👉 Add a contact
+
+![Add-Contact](./screenshots/Add-Contact.gif)
+
+---
+
+👉 Edit contact
+
+![Edit-Contact](./screenshots/Edit-Contact.gif)
+
+---
+
+👉 Delete contact
+
+![Delete-Contact](./screenshots/Delete-Contact.gif)
+
+---
+
+👉 Search on enlisted contact
+
+![Search-Contact](./screenshots/Search-Contacts.gif)
+
+---
+
+## 🌎 Cross-browser compatibility
+
+> Best user experience can be enjoyed on:
+
+✔️ Google Chrome
+
+✔️ Safari
+
+✔️ Mozilla Firefox
+
+✔️ Microsoft Edge
+
+✔️ Internet Explorer 11 and more
+
+---
