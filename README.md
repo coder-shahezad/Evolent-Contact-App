@@ -58,25 +58,25 @@ $ npm install
 
 👉 Add a contact
 
-![Add-Contact](./screenshots/Add-Contact.gif)
+![Add-Contact](Add-Contact.gif)
 
 ---
 
 👉 Edit contact
 
-![Edit-Contact](./screenshots/Edit-Contact.gif)
+![Edit-Contact](Edit-Contact.gif)
 
 ---
 
 👉 Delete contact
 
-![Delete-Contact](./screenshots/Delete-Contact.gif)
+![Delete-Contact](Delete-Contact.gif)
 
 ---
 
 👉 Search on enlisted contact
 
-![Search-Contact](./screenshots/Search-Contacts.gif)
+![Search-Contact](Search-Contacts.gif)
 
 ---
 
